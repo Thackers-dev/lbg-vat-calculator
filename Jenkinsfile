@@ -6,7 +6,7 @@ pipeline {
     stage('Checkout') {
         steps {
           // Get some code from a GitHub repository
-          git branch: 'main', url: 'https://github.com/qatrainer/lbg-vat-calculator.git'
+          git branch: 'main', url: 'https://github.com/Thackers-dev/lbg-vat-calculator.git'
         }
     }
     stage('Install') {
@@ -18,7 +18,7 @@ pipeline {
     stage('Test') {
         steps {
           // Run the ReactJS tests
-          sh "npm test"
+          sh "sudo npm test"
         }
     }
     stage('SonarQube Analysis') {
